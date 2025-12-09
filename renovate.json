@@ -1,0 +1,54 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "mergeConfidence:all-badges",
+    "config:recommended",
+    ":disableRateLimiting",
+    ":enableVulnerabilityAlertsWithLabel(High priority)",
+    "group:allNonMajor",
+    "docker:pinDigests",
+    "docker:enableMajor",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "rebaseWhen": "behind-base-branch",
+  "separateMultipleMajor": false,
+  "separateMinorPatch": false,
+  "ignoreTests": true,
+  "assignees": [
+    "cleverer"
+  ],
+  "packageRules": [
+    {
+      "matchCategories": [
+        "docker"
+      ],
+      "digest": {
+        "groupName": "All Docker Digests",
+        "groupSlug": "all-docker-digests"
+      }
+    },
+    {
+      "matchUpdateTypes": [
+        "digest"
+      ],
+      "automerge": true,
+      "automergeType": "branch"
+    },
+    {
+      "matchFileNames": [
+        "**/10-taiga-events.yaml"
+      ],
+      "matchDepNames": [
+        "rabbitmq"
+      ],
+      "allowedVersions": "<4.1.0"
+    }
+  ],
+  "kubernetes": {
+    "managerFilePatterns": [
+      "/kubeconfigs/.+\\.yaml$/"
+    ]
+  }
+}
