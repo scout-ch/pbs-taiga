@@ -35,20 +35,6 @@
       ],
       "automerge": true,
       "automergeType": "branch"
-    },
-    {
-      "matchFileNames": [
-        "**/10-taiga-events.yaml"
-      ],
-      "matchDepNames": [
-        "rabbitmq"
-      ],
-      "allowedVersions": "<4.1.0"
     }
-  ],
-  "kubernetes": {
-    "managerFilePatterns": [
-      "/kubeconfigs/.+\\.yaml$/"
-    ]
-  }
+  ]
 }
