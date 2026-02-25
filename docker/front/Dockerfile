@@ -1,4 +1,4 @@
-FROM node:24.14.0@sha256:dcac36e9d0d3049214862dac30af9f1ee86fccaa8d3bd3a0399b59d6f1bec0eb AS builder
+FROM node:24.14.0@sha256:ec67435e17851b2cbe2f04bf93d8d59e95133514c6ef14119abbb76ddb016a69 AS builder
 
 RUN git clone https://github.com/taigaio/taiga-contrib-oidc-auth.git /app && cd /app && git checkout c623b753047ce9923f3e38614d86e81fc5eb2bb1
 
