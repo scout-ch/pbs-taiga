@@ -8,7 +8,7 @@ RUN npm install && npm install gulp
 
 RUN ./node_modules/.bin/gulp build
 
-FROM taigaio/taiga-front:6.9.0@sha256:35e3345e2a0152e777543b1f5565fd4578804d39b57a4848fe41b723bcce5885 AS final
+FROM taigaio/taiga-front:6.10.3@sha256:570c8792ce802ff803a2275967e1d593cdd7c748e2d63163c4dab35fe2d2d646 AS final
 
 COPY --from=builder /app/front/dist/ /usr/share/nginx/html/plugins/oidc-auth/
 
