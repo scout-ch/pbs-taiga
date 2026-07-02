@@ -1,4 +1,4 @@
-FROM taigaio/taiga-back:6.10.1@sha256:627d77e43e1d83d6e75bd6556d2244c9366f4518a077f7d63d76188b51f86713 AS base
+FROM taigaio/taiga-back:6.10.2@sha256:4beed8f62c9ffbbcea824aa01c48fa72a2c2f713be6732e2ee37d2e777843f51 AS base
 
 FROM alpine/git@sha256:e043be20669db13cbcfb6190192babee4cf2dca98709bb0c2d08ca2d35a0a06a AS cloner
 
